@@ -1,52 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font font-family: Arial, sans-serif;
-    background-color: purple;
+    font-family: 'Arial', sans-serif;
+    background-color: #800080;
     padding: 20px;
 }
+
 .container {
     display: flex;
-    justify-items: center;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     max-width: 1000px;
-    margin:auto;
-    background-color: rgb(161, 139, 139);
+    margin: auto;
+    background-color: #B89CA5;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgb(186, 159, 186);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    gap: 20px;
 }
+
 .text {
-    flex: 1;
-    padding: 20px;
-    color: rgb(0, 0, 0);
+    flex: 1 1 300px;
+    font-size: 18px;
+    color: #111;
 }
-.text h2 {
-    margin-bottom: 15px;
-    colour: rgb(185, 194, 226);
-}
+
 .image {
-    flex : 1;
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .image img {
     max-width: 100%;
     height: auto;
-    border-radius:10px;
-    object-fit: cover;
+    border-radius: 12px;
 }
-@media (max-with:768px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
         text-align: center;
     }
+
+    .text, .image {
+        width: 100%;
+    }
+
     .image {
         margin-top: 20px;
         justify-content: center;
     }
-    .text, .image {
+
+    .image img {
         width: 100%;
+        max-width: 100%;
     }
 }
