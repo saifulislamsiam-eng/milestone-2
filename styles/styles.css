@@ -44,5 +44,9 @@ body {
     }
     .image {
         margin-top: 20px;
+        justify-content: center;
+    }
+    .text, .image {
+        width: 100%;
     }
 }
